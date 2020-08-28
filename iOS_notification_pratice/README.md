@@ -21,7 +21,7 @@
   전송하는 notification 
 
   ```swift
-  NotificationCenter.default.post(name:"noti", object:"값")
+  NotificationCenter.default.post(name:NSNotification.Name(rawValue: "noti"), object:"값")
   //noti를 Observer에게 값을 전달
   ```
 
@@ -38,10 +38,10 @@
   ```
 
   ```swift
-  NotificationCenter.default.addObserver(self, selector: #selector(handleNoti), name: noti, object: nil)
+  NotificationCenter.default.addObserver(self, selector: #selector(handleNoti), name: NSNotification.Name(rawValue: "noti"), object: nil)
   //noti라는 notification이 오면 selector 실행
   
-  @objc func handleNoti(_ notification: NSNotification){
+  @objc func handleNoti(){
     print("Noti")
   }
   //name, object, userInfo가 넘어옴
