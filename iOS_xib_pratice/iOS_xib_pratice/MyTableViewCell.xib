@@ -106,6 +106,17 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="placeDate" destination="WKQ-4I-rUm" id="RBU-hI-2RH"/>
+                <outlet property="placeName" destination="h0b-3U-IeM" id="H5c-hs-7P9"/>
+                <outlet property="placePhoto" destination="JF2-ts-uFJ" id="QKh-tg-bbb"/>
+                <outlet property="placeSubway" destination="tw6-Hr-31z" id="K5K-Bk-Ms9"/>
+                <outlet property="writerImg" destination="l8j-YI-8W4" id="KCc-7w-rmo"/>
+                <outlet property="writerName" destination="RKs-Ak-gLa" id="7ZB-nB-Abe"/>
+                <outletCollection property="placeTag" destination="qDm-l9-f3S" collectionClass="NSMutableArray" id="1qH-JM-MJk"/>
+                <outletCollection property="placeTag" destination="8zl-oe-iWV" collectionClass="NSMutableArray" id="21i-UT-VhL"/>
+                <outletCollection property="placeTag" destination="QvS-c4-ScL" collectionClass="NSMutableArray" id="xgQ-au-HKD"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="130.24553571428572"/>
         </tableViewCell>
     </objects>
