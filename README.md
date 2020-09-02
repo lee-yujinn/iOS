@@ -6,5 +6,5 @@
 
 ⏺2020.08.31 : 승호가 준 MypageView 연습..
 
-⏺2020.09.02 : closure
+⏺2020.09.02 : [closure](https://github.com/lee-yujinn/iOS/tree/master/iOS%20swift)
 
