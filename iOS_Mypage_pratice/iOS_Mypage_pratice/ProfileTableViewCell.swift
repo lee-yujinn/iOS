@@ -2,7 +2,7 @@
 //  ProfileTableViewCell.swift
 //  iOS_Mypage_pratice
 //
-//  Created by 이유진 on 2020/08/31.
+//  Created by 이유진 on 2020/09/03.
 //  Copyright © 2020 이유진. All rights reserved.
 //
 
@@ -14,19 +14,24 @@ class ProfileTableViewCell: UITableViewCell {
     static let nibName = "ProfileTableViewCell"
     
     @IBOutlet weak var profileImg: UIImageView!
+    @IBOutlet weak var proName: UILabel!
+    @IBOutlet weak var proPart: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        // Initialization code
         configureLabels()
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
     }
     
     func configureLabels() {
-//        explainLabel.addCharacterSpacing(kernValue: -0.24)
-//        nickNameLabel.addCharacterSpacing(kernValue: -0.24)
-//        explainLabel.text = "소소한 일상을 나답게 살아가고자 글을 씁니다"
-//        nickNameLabel.text = "머리가 말랑말랑"
-//        nickNameLabel.textColor = UIColor.white
-//        explainLabel.textColor = UIColor.white
+        proName.text = "조희연"
+        proPart.text = "27기 웹파트"
     }
-    
 }
