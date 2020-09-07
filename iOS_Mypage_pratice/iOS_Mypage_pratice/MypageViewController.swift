@@ -10,11 +10,15 @@ import UIKit
 
 class MypageViewController: UIViewController {
 
+    //delegate, closure .. 둘 사이엔 이게 좋음
+    //여러개일때 노티가 좋음
+    
     @IBOutlet weak var tableview: UITableView!
     
     let headerView: UIView = {
         let v = UIView()
-        let width = UIScreen.main.bounds.width //***
+        let width = UIScreen.main.bounds.width
+        //= self.view.frame.width 완벽하게 같진 않음 -> 뷰컨이 없으면 다름 / 뷰컨이 있으면 안됨
         
         v.backgroundColor = UIColor.white
         v.frame = CGRect.init(x: 0, y: 0, width: width, height: 44)
@@ -27,26 +31,26 @@ class MypageViewController: UIViewController {
         
         v.backgroundColor = UIColor.red
         v.frame = CGRect.init(x: 0, y: 0, width: width / 2 , height: 1)
-        v.translatesAutoresizingMaskIntoConstraints = false //***
+        v.translatesAutoresizingMaskIntoConstraints = false //*** 오토레이아웃을 코드로 잡을때 무조건 이것을 해줘야함
         return v
     }()
     
-//    //이 탭컬렉션뷰는 또 뭘까
-//    let tabCollectionView: UICollectionView = {
-//        let width = UIScreen.main.bounds.width
-//        let frame = CGRect(x: 0, y: 0, width: width, height: 44)
-//
-//        let layout = UICollectionViewFlowLayout()
-//        layout.minimumInteritemSpacing = .zero
-//        layout.minimumLineSpacing = .zero
-//        layout.scrollDirection = .vertical
-//
-//        let tabCV = UICollectionView(frame: frame, collectionViewLayout: layout)
-//        tabCV.register(TabCollectionViewCell.self, forCellWithReuseIdentifier: TabCollectionViewCell.reuseIdentifier)
-//        tabCV.translatesAutoresizingMaskIntoConstraints = false
-//        tabCV.isPagingEnabled = true
-//        return tabCV
-//    }()
+    //이 탭컬렉션뷰는 또 뭘까
+    let tabCollectionView: UICollectionView = {
+        let width = UIScreen.main.bounds.width
+        let frame = CGRect(x: 0, y: 0, width: width, height: 44)
+
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = .zero
+        layout.minimumLineSpacing = .zero
+        layout.scrollDirection = .vertical
+
+        let tabCV = UICollectionView(frame: frame, collectionViewLayout: layout)
+        tabCV.register(TabCollectionViewCell.self, forCellWithReuseIdentifier: TabCollectionViewCell.reuseIdentifier)
+        tabCV.translatesAutoresizingMaskIntoConstraints = false
+        tabCV.isPagingEnabled = true
+        return tabCV
+    }()
     
 //    //이 페이징컬렉션뷰는 뭐지
 //    let pagingCollectionView: UICollectionView = {
@@ -70,7 +74,7 @@ class MypageViewController: UIViewController {
     //뭔지 알아보자
     override var preferredStatusBarStyle: UIStatusBarStyle {
            return .lightContent
-       }
+       } //스테이터스바 커스텀 -> 플픽에서는 필요없슴
        
        override func viewDidAppear(_ animated: Bool) {
            navigationController?.navigationBar.barStyle = .black
@@ -95,8 +99,8 @@ extension MypageViewController {
         let refreshControl: UIRefreshControl! //이거 공부하자
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(updateUI(refresh:)), for: .valueChanged)
-        refreshControl.backgroundColor = UIColor.red
-        refreshControl.tintColor = UIColor.white
+        refreshControl.backgroundColor = UIColor.white
+        refreshControl.tintColor = UIColor.black
         refreshControl.attributedTitle = NSAttributedString(string: "새로고침", attributes: attributedString)
 
         tableview.addSubview(refreshControl)
@@ -109,7 +113,7 @@ extension MypageViewController {
     }
     
     private func setupNavigationBar() {
-//        guard let navigationBar = self.navigationController?.navigationBar else { return }
+        guard let navigationBar = self.navigationController?.navigationBar else { return }
 //
 //        let titleLabel: UILabel = {
 //            let label = UILabel()
@@ -119,16 +123,16 @@ extension MypageViewController {
 //            return label
 //        }()
 //
-//        navigationBar.isTranslucent = true
-//        navigationBar.backgroundColor = UIColor.mainBlue
-//        navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//        navigationBar.shadowImage = UIImage()
-//
-//        let leftButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "icBackWhite"),
-//                                                          style: .plain,
-//                                                          target: self,
-//                                                          action: #selector(dismissVC))
-//        navigationItem.leftBarButtonItem = leftButton
+        navigationBar.isTranslucent = true
+        navigationBar.backgroundColor = UIColor.white
+        navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationBar.shadowImage = UIImage()
+
+        let leftButton: UIBarButtonItem = UIBarButtonItem(title: "SOPT", style: .done, target: self, action: nil)
+        
+        navigationItem.leftBarButtonItem = leftButton
+        //inabled false 로 해놓고 set titleColor(UIColor.black, for:.disabled)
+        
 //        navigationItem.titleView = titleLabel
     }
     
@@ -168,7 +172,7 @@ extension MypageViewController {
 //            ]
 //            NSLayoutConstraint.activate(constraints)
 //            UIView.animate(withDuration: 0.3) {
-//                self.view.layoutIfNeeded()
+//                self.view.layoutIfNeeded() //리로드같은 역할
 //            }
 //
 //        } else {
@@ -223,7 +227,7 @@ extension MypageViewController: UITableViewDataSource {
         case 1:
             return 2
         default:
-            assert(false)
+            fatalError()
         }
     }
     
@@ -240,7 +244,7 @@ extension MypageViewController: UITableViewDataSource {
             
             
 //            cell.addSubview(pagingCollectionView)
-            //
+            //다른곳에다가 전달할 수 있는
 //            cell.completionHandler = { indexPath in
 //                self.tabCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .bottom)
 //                self.tabCollectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
