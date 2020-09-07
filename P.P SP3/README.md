@@ -2,9 +2,7 @@
 
 ### MypageScene
 
-![](/Users/leeyujin/Desktop/iOS/iOS/P.P SP3/mypageview.png)
-
-
+<img src="./mypageview.png" width="50%" height="50%" align = "left">
 
 ##### 🗂**Foldering**
 
