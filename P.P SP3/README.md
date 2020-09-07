@@ -2,7 +2,7 @@
 
 ### MypageScene
 
-<img src="./mypageview.png" width="50%" height="50%" align = "left">
+<img src="./mypageview.png" width="30%" height="30%">
 
 ##### 🗂**Foldering**
 
