@@ -10,3 +10,4 @@
 
 ⏺2020.09.04 ~ 06 : [P.P 해커톤](https://github.com/lee-yujinn/iOS/tree/master/P.P%20SP3)
 
+⏺2020.09.18 : [properties](https://github.com/lee-yujinn/iOS/tree/master/iOS%20swift)
