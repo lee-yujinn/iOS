@@ -39,7 +39,7 @@ extension CustomTableViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell") as? CustomTableViewCell else { return UITableViewCell() }
         var title = ""
         var description = ""
-        switch(indexPath.section) {
+        switch indexPath.section {
         case 0:
             title = arrWoo[indexPath.row]
             description = arrDescWoo[indexPath.row]

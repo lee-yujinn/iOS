@@ -20,6 +20,9 @@
 		45BF758827FE6F54002066BD /* Basic2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF758727FE6F54002066BD /* Basic2TableViewController.swift */; };
 		45BF758A27FE6F66002066BD /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF758927FE6F66002066BD /* CustomTableViewController.swift */; };
 		45BF758C27FE823B002066BD /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF758B27FE823B002066BD /* CustomTableViewCell.swift */; };
+		45BF759428046250002066BD /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF759328046250002066BD /* SettingViewController.swift */; };
+		45BF759628046917002066BD /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF759528046917002066BD /* InfoViewController.swift */; };
+		45BF759828046D15002066BD /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF759728046D15002066BD /* InfoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		45BF758727FE6F54002066BD /* Basic2TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basic2TableViewController.swift; sourceTree = "<group>"; };
 		45BF758927FE6F66002066BD /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		45BF758B27FE823B002066BD /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		45BF759328046250002066BD /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		45BF759528046917002066BD /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		45BF759728046D15002066BD /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +174,9 @@
 				45BF758727FE6F54002066BD /* Basic2TableViewController.swift */,
 				45BF758927FE6F66002066BD /* CustomTableViewController.swift */,
 				45BF758B27FE823B002066BD /* CustomTableViewCell.swift */,
+				45BF759328046250002066BD /* SettingViewController.swift */,
+				45BF759528046917002066BD /* InfoViewController.swift */,
+				45BF759728046D15002066BD /* InfoTableViewCell.swift */,
 			);
 			path = ViewWithData;
 			sourceTree = "<group>";
@@ -311,8 +320,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4572BD1327F138C000A0D556 /* ViewController.swift in Sources */,
+				45BF759828046D15002066BD /* InfoTableViewCell.swift in Sources */,
 				45BF758827FE6F54002066BD /* Basic2TableViewController.swift in Sources */,
 				4572BD0F27F138C000A0D556 /* AppDelegate.swift in Sources */,
+				45BF759428046250002066BD /* SettingViewController.swift in Sources */,
+				45BF759628046917002066BD /* InfoViewController.swift in Sources */,
 				45BF758C27FE823B002066BD /* CustomTableViewCell.swift in Sources */,
 				4572BDC227FB168100A0D556 /* BaseTableViewController.swift in Sources */,
 				45BF758A27FE6F66002066BD /* CustomTableViewController.swift in Sources */,
